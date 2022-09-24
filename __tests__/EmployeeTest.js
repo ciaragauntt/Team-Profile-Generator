@@ -32,7 +32,7 @@ test("Testing getEmail method", () => {
 
 //gets role from getRole()
 test("Testing getRole method", () => {
-    const role = 'Intern';
+    const role = 'Employee';
     const newEmployee = new Employee('Ciara', 60, 'ci.gauntt@gmail.com');
     expect(newEmployee.getRole()).toBe(role);
 });
