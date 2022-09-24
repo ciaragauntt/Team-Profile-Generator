@@ -3,7 +3,7 @@ const Engineer = require('../lib/Engineer');
 // creating engineer object
 test('Creating engineer object', () => {
     const Github = 'cicigauntt';
-    const engineer = new Engineer('Ciara', 60, 'ci.gauntt@gmail.com', 'Github');
+    const engineer = new Engineer('Ciara', 60, 'ci.gauntt@gmail.com', Github);
     expect(engineer.github).toBe(Github)
 });
 
