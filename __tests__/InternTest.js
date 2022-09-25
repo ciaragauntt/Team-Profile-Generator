@@ -15,7 +15,7 @@ test('Gets school from getSchool method', () => {
 });
 // gets role from getRole()
 test('Gets role from getRole method', () => {
-    const role = 'intern';
+    const returnrole = 'Intern';
     const intern = new Intern('Ciara', 60, 'ci.gauntt@gmail.com', 'UofU');
-    expect(intern.getRole()).toBe(role);
+    expect(intern.getRole()).toBe(returnrole);
 });

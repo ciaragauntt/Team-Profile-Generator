@@ -2,11 +2,8 @@ const Employee = require('../lib/Employee');
 
 // creates new employee as an object
 test("Creating a new employee.", () => {
-    const newEmployee = new Employee('Ciara', '60', 'ci.gauntt@gmail.com');
+    const newEmployee = new Employee();
     expect(typeof(newEmployee)).toBe('object');
-    expect(newEmployee.name).toBe(String);
-    expect(newEmployee.id).toBe(Number);
-    expect(newEmployee.email).toBe(String);
 });
 
 //gets Id from getId()

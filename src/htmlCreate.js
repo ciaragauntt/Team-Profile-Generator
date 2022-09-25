@@ -1,6 +1,6 @@
-const teamProfile = team => {
 
-    //create the html for the manager
+const teamProfile = team => {
+   //create the html for the manager
     const createManager = manager => {
         return`
         <div class="col-4 mt-4">
@@ -13,7 +13,7 @@ const teamProfile = team => {
                 <ul class="list-group">
                     <li class="list-item">${manager.getId()}</li>
                     <li class="list-item">Email: <a href="mailto:${manager.getEmail()}">${manager.getEmail()}</a></li>
-                    <li class="list-item">Office Number: ${manager.officeNumber()}</li>
+                    <li class="list-item">Office Number:${manager.getOfficeNumber()}</li>
                 </ul>
             </div>
         </div>
@@ -59,5 +59,51 @@ const teamProfile = team => {
         </div>
     </div>`;
     };
+    const generateHtml = [];
 
-}
+    generateHtml.push(team
+        .filter(employee => employee.getRole() === 'Manager')
+        .map(manager => createManager(manager))
+        );
+    generateHtml.push(team
+        .filter(employee => employee.getRole() === 'Engineer')
+        .map(engineer => createEngineer(engineer))
+        );
+    generateHtml.push(team
+        .filter(employee => employee.getRole() === 'Intern')
+        .map(intern => createIntern(intern))
+        );  
+
+    return generateHtml.join("");
+};
+
+
+
+module.exports = team => {
+
+    return`
+    <!DOCTYPE html>
+<html lang="'en">
+    <head>
+        <meta charset="UTF-8">
+        <title> Team Profile</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <header>
+            <nav class="navbar" id="navbar">
+                <span class="navbar-brand mb-0 h1 w-100 text-center">Team Profile</span>
+            </nav>
+        </header>
+        <main>
+            <div class="container">
+                <div class="row justify-content-center" id="team-card">
+                    <!--This is where the cards are going to show up!-->
+                    ${teamProfile(team)}
+                    </div>
+                </div>
+            </div>
+        </body>
+    </html>`;
+};

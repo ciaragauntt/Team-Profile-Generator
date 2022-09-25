@@ -138,7 +138,7 @@ const addEmployee = () => {
             // employee github
             type: 'input',
             name: 'github',
-            message: 'Enter employees github usernmae',
+            message: 'Enter employees github username',
             when: (input) => input.role === "Engineer",
             validate: name => {
                 if(name) {
@@ -154,12 +154,12 @@ const addEmployee = () => {
             type: 'input',
             name: 'school',
             message: 'Enter interns school',
-            when: (input) => input.role === "Inten",
+            when: (input) => input.role === "Intern",
             validate: name => {
                 if (name) {
                     return true;
                 } else {
-                    console.log("Interns schoo required");
+                    console.log("Interns school required");
                     return false;
                 }
             }
@@ -173,7 +173,7 @@ const addEmployee = () => {
         }
     ])
     .then (employeeData => {
-        let {name, id, email, github, school, confirmAdd} = employeeData;
+        let {name, id, email, role, github, school, confirmAdd} = employeeData;
         let employee;
 
         if (role === "Engineer") {
