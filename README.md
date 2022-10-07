@@ -18,7 +18,6 @@ Javascript
 # Tutorial
 
 
-https://user-images.githubusercontent.com/103298079/192632724-445b290c-f160-482b-bb02-e27ffd13b76c.mp4
-
+https://drive.google.com/file/d/1kzMgzFNNEPJ1Y0Vdk333RaE7p_9eZZkV/view
 
 
