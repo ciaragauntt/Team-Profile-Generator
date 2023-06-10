@@ -3,7 +3,9 @@ Designed a team profile generator using node, express, inquirer, jest, and mongo
 are input, an html page is generated with all of the information given. 
 
 # Installation
+```bash
 npm i
+```
 npm install express
 npm install inquirer@8.2.4
 npm i jest
