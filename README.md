@@ -6,10 +6,18 @@ are input, an html page is generated with all of the information given.
 ```bash
 npm i
 ```
+```bash
 npm install express
+```
+```bash
 npm install inquirer@8.2.4
+```
+```bash
 npm i jest
+```
+```bash
 npm i mongoose
+```
 
 # Technologies
 Bootstrap
